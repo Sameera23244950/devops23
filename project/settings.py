@@ -131,4 +131,4 @@ MEDIA_ROOT = BASE_DIR / 'static/media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSRF_TRUSTED_ORIGINS = ['https://d651392fd34a4604a4ccff7d7e1ca9a3.vfs.cloud9.eu-west-1.amazonaws.com/']
+CSRF_TRUSTED_ORIGINS = ['https://d651392fd34a4604a4ccff7d7e1ca9a3.vfs.cloud9.eu-west-1.amazonaws.com','https://x23244950env.eba-wqbewhvh.eu-west-1.elasticbeanstalk.com/']
