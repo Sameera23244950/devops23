@@ -12,22 +12,19 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-fabqjd*8dk9gdxf9wqi^1=r&3xzy*3z0eksp2_42i$j771*h1!'
 
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["d651392fd34a4604a4ccff7d7e1ca9a3.vfs.cloud9.eu-west-1.amazonaws.com","x23244950env.eba-wqbewhvh.eu-west-1.elasticbeanstalk.com"]
-
-
+ALLOWED_HOSTS = [
+    "d651392fd34a4604a4ccff7d7e1ca9a3.vfs.cloud9.eu-west-1.amazonaws.com",
+    "x23244950env.eba-wqbewhvh.eu-west-1.elasticbeanstalk.com"
+]
 
 # Application definition
 
@@ -38,7 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'food', # Django app
+    'food',  # Django app
 ]
 
 MIDDLEWARE = [
@@ -64,14 +61,13 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'food.views.categories', #updated
+                'food.views.categories',  # Updated
             ],
         },
     },
 ]
 
 WSGI_APPLICATION = 'project.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
@@ -82,7 +78,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -102,7 +97,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
@@ -113,7 +107,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
@@ -131,4 +124,7 @@ MEDIA_ROOT = BASE_DIR / 'static/media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSRF_TRUSTED_ORIGINS = ['https://d651392fd34a4604a4ccff7d7e1ca9a3.vfs.cloud9.eu-west-1.amazonaws.com','https://x23244950env.eba-wqbewhvh.eu-west-1.elasticbeanstalk.com/']
+CSRF_TRUSTED_ORIGINS = [
+    'https://d651392fd34a4604a4ccff7d7e1ca9a3.vfs.cloud9.eu-west-1.amazonaws.com',
+    'https://x23244950env.eba-wqbewhvh.eu-west-1.elasticbeanstalk.com/'
+]
